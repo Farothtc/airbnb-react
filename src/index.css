@@ -1,3 +1,7 @@
+body{
+  font-family:"Poppins", sans-serif ;
+}
+
 .navbar{
  
   display: flex;
@@ -9,4 +13,27 @@
 
  .navbar-image{
   max-width: 100px;
-} 
+}
+
+section{
+  padding: 20px;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image{
+  max-width: 800px;
+  align-self: center;
+}
+
+.hero-header{
+  margin-bottom: 16px;
+}
+
+
+.hero-text{
+  margin-top: 0;
+}
