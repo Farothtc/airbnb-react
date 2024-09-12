@@ -1,16 +1,16 @@
-export function Card() {
+export function Card({ img, rating, reviewCount, country, title, price }) {
   return (
     <div className="card">
-      <img src="./katie.png" className="card-image" />
+      <img src={`./${img}`} className="card-image" />
       <div className="card-line">
         <img src="./star.png" />
-        <span>5.0</span>
-        <span className="gray">(6) •</span>
-        <span className="gray">USA</span>
+        <span>{rating}</span>
+        <span className="gray">({reviewCount}) •</span>
+        <span className="gray">{country}</span>
       </div>
-      <p>Life lessons with Katie Zaferes</p>
+      <p>{title}</p>
       <p>
-        <strong>From $136</strong>/ person
+        <strong>From ${price}</strong>/ person
       </p>
     </div>
   );
