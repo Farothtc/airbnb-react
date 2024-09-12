@@ -6,7 +6,24 @@ import { Joke } from "./components/Joke";
 function App() {
   return (
     <>
-      <Joke
+      <Navbar />
+      <Hero />
+      <Card
+        img="katie.png"
+        rating="5.0"
+        reviewCount={6}
+        country="Turkey"
+        title="Life Lessons with Katie Zarefes"
+        price={136}
+      />
+    </>
+  );
+}
+
+export default App;
+
+{
+  /* <Joke
         punchline="It’s hard to explain puns to kleptomaniacs because 
 they always take things literally."
       />
@@ -14,10 +31,7 @@ they always take things literally."
         setup="I got my daughter a fridge for her birthday."
         punchline="I can't wait to see her face light up when she opens it."
       />
-      <Joke
-        setup="How did the hacker escape the police?"
-        punchline="He just ransomware!"
-      />
+      <Joke setup="How did the hacker escape the police?" punchline={true} />
       <Joke
         setup="Why don't pirates travel on mountain roads?"
         punchline="Scurvy."
@@ -29,15 +43,5 @@ they always take things literally."
       <Joke
         setup="What's the best thing about Switzerland?"
         punchline="I don't know, but the flag is a big plus!"
-      />
-    </>
-  );
-}
-
-export default App;
-
-{
-  /* <Navbar />
-      <Hero />
-      <Card /> */
+      /> */
 }
