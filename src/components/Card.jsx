@@ -1,6 +1,22 @@
-export function Card({ img, rating, reviewCount, location, title, price }) {
+export function Card({
+  img,
+  rating,
+  reviewCount,
+  location,
+  title,
+  price,
+  openSpots,
+}) {
+  let badgeText;
+  if (openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card">
+      {badgeText && <div className="card-badge">{badgeText}</div>}
       <img src={`./${img}`} className="card-image" />
       <div className="card-line">
         <img src="./star.png" />
