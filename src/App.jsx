@@ -2,8 +2,13 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Card } from "./components/Card";
 import { Joke } from "./components/Joke";
+import jokesData from "../jokesData";
 
 function App() {
+  const jokeElements = jokesData.map((joke) => (
+    <Joke setup={joke.setup} punchline={joke.punchline} />
+  ));
+
   return (
     <>
       <Navbar />
@@ -16,6 +21,7 @@ function App() {
         title="Life Lessons with Katie Zarefes"
         price={136}
       />
+      {jokeElements}
     </>
   );
 }
