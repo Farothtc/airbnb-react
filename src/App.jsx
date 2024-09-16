@@ -6,19 +6,7 @@ import jokesData from "../jokesData";
 import data from "../data";
 
 function App() {
-  const dataElements = data.map((e) => (
-    <Card
-      key={e.id}
-      id={e.id}
-      title={e.title}
-      img={e.coverImg}
-      price={e.price}
-      rating={e.stats.rating}
-      reviewCount={e.stats.reviewCount}
-      location={e.location}
-      openSpots={e.openSpots}
-    />
-  ));
+  const dataElements = data.map((e) => <Card key={e.id} e={e} />);
   // const jokeElements = jokesData.map((joke) => (
   //   <Joke setup={joke.setup} punchline={joke.punchline} />
   // ));
