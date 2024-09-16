@@ -16,6 +16,7 @@ function App() {
       rating={e.stats.rating}
       reviewCount={e.stats.reviewCount}
       location={e.location}
+      openSpots={e.openSpots}
     />
   ));
   // const jokeElements = jokesData.map((joke) => (
