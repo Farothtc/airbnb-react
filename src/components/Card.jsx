@@ -1,32 +1,26 @@
-export function Card({
-  img,
-  rating,
-  reviewCount,
-  location,
-  title,
-  price,
-  openSpots,
-}) {
+export function Card(props) {
   let badgeText;
-  if (openSpots === 0) {
+  if (props.e.openSpots === 0) {
     badgeText = "SOLD OUT";
-  } else if (location === "Online") {
+  } else if (props.e.location === "Online") {
     badgeText = "ONLINE";
   }
+
+  console.log(props.e.img);
 
   return (
     <div className="card">
       {badgeText && <div className="card-badge">{badgeText}</div>}
-      <img src={`./${img}`} className="card-image" />
+      <img src={`./${props.e.coverImg}`} className="card-image" />
       <div className="card-line">
         <img src="./star.png" />
-        <span>{rating}</span>
-        <span className="gray">({reviewCount}) •</span>
-        <span className="gray">{location}</span>
+        <span>{props.e.stats.rating}</span>
+        <span className="gray">({props.e.stats.reviewCount}) •</span>
+        <span className="gray">{props.e.location}</span>
       </div>
-      <p className="card-title">{title}</p>
+      <p className="card-title">{props.e.title}</p>
       <p className="card-price">
-        <strong>From ${price}</strong>/ person
+        <strong>From ${props.e.price}</strong>/ person
       </p>
     </div>
   );
