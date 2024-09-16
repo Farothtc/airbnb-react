@@ -8,6 +8,7 @@ import data from "../data";
 function App() {
   const dataElements = data.map((e) => (
     <Card
+      key={e.id}
       id={e.id}
       title={e.title}
       img={e.coverImg}
@@ -22,11 +23,11 @@ function App() {
   // ));
 
   return (
-    <>
+    <div>
       <Navbar />
       <Hero />
-      {dataElements}
-    </>
+      <section className="cards-list">{dataElements}</section>
+    </div>
   );
 }
 
